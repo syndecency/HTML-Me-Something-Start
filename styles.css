@@ -1,1 +1,102 @@
-/* Write your CSS here! */
+* {
+  font-family: "Sora";
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 0;
+}
+
+a {
+  font-size: 32px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: bold;
+  color: #444444;
+}
+
+body {
+  display: block;
+  flex-direction: column;
+  margin: 8px;
+  color: #444444;
+}
+
+header {
+  padding-top: 20px;
+  background-image: url("images/gir.png");
+  height: 300px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+section {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: end;
+  padding-bottom: 20px;
+}
+
+/* right box */
+article {
+  flex: 0 0 60%;
+  overflow: scroll;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px auto;
+  width: 90%;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+.top {
+  margin-top: -50px;
+}
+
+.leftBox {
+  display: flex;
+  flex: 0 0 40%;
+  justify-content: left;
+  align-items: center;
+}
+
+/* aligns the centered content to the left */
+.poemAlignment {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 50px;
+}
+
+#mainHeading {
+  color: red;
+  text-shadow: #444444;
+}
+
+#testP {
+  color: green;
+}
+
+.funParagraph {
+  font-weight: bold;
+}
+
+.roundedCorners {
+  border-radius: 25px;
+}

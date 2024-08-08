@@ -1,8 +1,247 @@
 <!DOCTYPE html>
 <html>
-   <head>
-   </head>
-   <body>
-      <!-- Write your HTML in this file! -->
-   </body>
+  <head>
+    <title>Poetic Logic</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="mainHeading">
+      <h1>Poetic Logic</h1>
+      <h2>//Translating classic poems to Javacript</h2>
+    </header>
+    <main>
+      <section class="top">
+        <div class="leftBox">
+          <div class="poemAlignment">
+            <div class="topSection">
+              <a
+                href="https://www.poetryfoundation.org/poems/56159/this-is-just-to-say"
+                >This Is Just To Say <img src="images/talk.svg"></a
+              >
+              <h3>by William Carlos Williams</h3>
+              <p>
+                This is just to say<br />I have eaten<br />the plums<br />that
+                were in<br />the icebox
+              </p>
+              <p>
+                and which<br />you were probably<br />saving<br />for breakfast
+              </p>
+              <p>
+                Forgive me<br />they were delicious<br />so sweet<br />and so
+                cold
+              </p>
+            </div>
+          </div>
+        </div>
+        <article class="rightBox">
+          <pre class="roundedCorners"><code class="language-js">
+function eatPlums(deliciousPlums) {
+   for (let i = 0; i < deliciousPlums; i++) {
+     console.log("Eating a delicious plum");
+   }
+   if (deliciousPlums >= 10) {
+     console.log(
+       `I ate ${deliciousPlums} plums. I'm going to be sick.`,
+     );
+   } else if (deliciousPlums > 0 && deliciousPlums < 10) {
+     console.log("Leave note: This Is Just To Say...");
+   } else {
+     console.log("No plums were eaten.");
+   }
+}
+eatPlums(3);
+           </code></pre>
+        </article>
+      </section>
+      <hr />
+      <section>
+        <div class="leftBox">
+          <div class="poemAlignment">
+            <a href="https://www.poetryfoundation.org/poems/46473/if---">If- <img src="images/star.svg"></a>
+            <h3>by Rudyard Kipling</h3>
+            <p>
+              If you can keep your head when all about you<br />&nbsp&nbsp;Are
+              losing theirs and blaming it on you,<br />If you can trust
+              yourself when all men doubt you,<br />&nbsp&nbsp;But make
+              allowance for their doubting too;<br />If you can wait and not be
+              tired by waiting,<br />&nbsp&nbsp;Or being lied about don't deal
+              in lies,<br />Or being hated, don't give way to hating,<br />&nbsp&nbsp;And
+              yet don't look too good, nor talk too wise:
+            </p>
+            <p>
+              If you can dream - and not make dreams your master;<br />&nbsp&nbsp;If
+              you can think - and not make thoughts your aim;<br />If you can
+              meet Triumph with Disaster<br />&nbsp&nbsp;And treat those two
+              imposters just the same;<br />If you can bear to hear the truth
+              you've spoken<br />&nbsp&nbsp;Twisted by knaves to make a trap for
+              fools,<br />Or watch the things you gave your life to, broken,<br />&nbsp&nbsp;And
+              stoop and build'em up with worn-out tools:
+            </p>
+            <p>
+              If you can make one heap of all your winnings<br />&nbsp&nbsp;And
+              risk it on one turn of pitch-and-toss,<br />And lose, and start
+              again at your beginnings<br />&nbsp&nbsp;And never breathe a word
+              about your loss;<br />If you can force your heart and nerve and
+              sinew<br />&nbsp&nbsp;To serve your turn long after they are
+              gone,<br />And to so hold on when there is nothing in you<br />&nbsp&nbsp;Except
+              the Will which says to them: 'Hold on!'
+            </p>
+            <p>
+              If you can talk with crowds and keep your virtue,<br />&nbsp&nbsp;Or
+              walk with Kings-nor lose the common touch,<br />If neither foes
+              nor loving friends can hurt you,<br />&nbsp&nbsp;If all men count
+              with you, but none too much;<br />If you can fill the unforgiving
+              minute<br />&nbsp&nbsp;With sixty seconds' worth of distance
+              run,<br />Yours is the Earth and everything that's in it,<br />&nbsp&nbsp;And
+              - which is more - you'll be a Man, my son!
+            </p>
+          </div>
+        </div>
+        <article class="rightBox">
+          <pre class="roundedCorners"><code class="language-js">
+const selfActualizedPerson = {
+   qualities: [
+      {
+         condition: "Maintain calm under pressure, trust oneself while considering others' doubts, be patient, honest, and humble in adversity",
+         achieved: true
+      },
+      {
+         condition: "Balanced perspective on dreams and reality, handle success and failure equally, remain resilient when facing setbacks or deceipt",
+         achieved: true
+      },
+      {
+         condition: "Risk everything when necessary, be prepared to start over, keep going",
+         achieved: true
+      },
+      {
+         condition: "Recognize everyones humanity, value, but be unaffected by friends and foes, value every minute",
+         achieved: true
+      }
+   ],
+
+   checkProgress: function() {
+      let achievedCount = 0;
+      for (let quality of this.qualities) {
+         if (quality.achieved) {
+            achievedCount++;
+         }
+      }
+
+      if (achievedCount === this.qualities.length) {
+         return "Congrats! You have become a self-actualized human being, my child!"
+      } else {
+         return `You've achieved ${achievedCount} out of ${this.qualities.length} qualities. Keep going!`
+          }
+    }
+};
+console.log(selfActualizedPerson.checkProgress());
+          </code></pre>
+        </article>
+      </section>
+      <hr />
+      <section class="fireBackground">
+        <div class="leftBox">
+          <div class="poemAlignment">
+            <a
+              class="greenText"
+              href="https://www.poetryfoundation.org/poetrymagazine/poems/14095/first-fig"
+              >First Fig <img src="images/fig.svg"></a
+            >
+            <h3 class="greenText">by Edna St. Vincent Millay</h3>
+            <p id="testP" class="funParagraph">
+              My candle burns at both ends;<br />
+              &nbsp&nbsp;It will not last the night;<br />But ah, my foes, and
+              oh, my friends -<br />
+              &nbsp&nbsp;It gives a lovely light!
+            </p>
+          </div>
+        </div>
+        <article>
+          <pre class="roundedCorners"><code class="language-js">
+// Define a function to represent the candle's burn
+function burnCandle(intensity) {
+    let duration = 500 / intensity; // Higher intensity shortens duration
+    let message = "";
+
+    if (intensity < 70) {
+        message = "Standard intensity: Regular candle";
+    } else {
+        message = "High intensity: Friends and foes agreed, it gave a lovely light";
+    }
+
+    return {intensity, duration, message};
+}
+        </code></pre>
+        </article>
+      </section>
+      <hr />
+      <section>
+        <div class="leftBox">
+          <div class="poemAlignment">
+            <a href="https://www.poemhunter.com/poem/i-love-kanye/"
+              >I Love Kanye <img src="images/heart.svg"></a
+            >
+            <h3>by Kanye West</h3>
+            <p>
+              I miss the old Kanye, straight from the 'Go Kanye'<br />Chop up
+              the soul Kanye, set on his goals Kanye<br />I hate the new Kanye,
+              the bad mood Kanye<br />The always rude Kanye, spaz in the news
+              Kanye<br />I miss the sweet Kanye, chop up the beats Kanye<br />I
+              gotta say, at that time I'd like to meet Kanye<br />See I invented
+              Kanye, it wasn't any Kanyes<br />And now I look and look around
+              and there's so many Kanyes<br />I used to love Kanye, I used to
+              love Kanye<br />I even had the pink Polo, I thought I was Kanye<br />What
+              if Kanye made a song, about Kanye?<br />Called 'I Miss The Old
+              Kanye,' man that'd be so Kanye<br />That's all it was Kanye, we
+              still love Kanye<br />And I love you like Kanye loves Kanye
+            </p>
+          </div>
+        </div>
+        <article>
+          <pre class="roundedCorners"><code class="language-js">
+// define arrays for different Kanye personas and attributes
+const kanyePersonas = [
+   {name: "Old Kanye", attributes: ["straight from the Go", "chop up the soul", "set on his goals"]},
+   {name: "New Kanye", attributes: ["bad mood", "always rude", "spaz in the news"]},
+   {name: "Sweet Kanye", attributes: ["chop up the beats", "best time to meet"]}
+];
+
+function getRandomAttributes() {
+   let selectedAttributes = [];
+
+   //select three random attributes from different personas
+   while (selectedAttributes.length < 3) {
+      const randomPersona = kanyePersonas[Math.floor(Math.random() * kanyePersonas.length)];
+      const randomAttribute = randomPersona.attributes[Math.floor(Math.random() * randomPersona.attributes.length)];
+      selectedAttributes.push(randomAttribute);
+   }
+   return selectedAttributes;
+}
+
+function createNewKanye() {
+   const attributes = getRandomAttributes();
+   console.log(`Today's Kanye, loved by Kanye: ${attributes.join(", ")}`);
+   console.log("** And I love you like Kanye loves Kanye **");
+}
+
+createNewKanye();
+         </code></pre>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <span>&#169 2024 Totally Artifical Information. All rights reserved.</span>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  </body>
 </html>
